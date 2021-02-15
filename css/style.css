@@ -1078,5 +1078,4 @@ img {
   border: 1px solid var(--color-font-accent);
   -webkit-text-fill-color: var(--color-font-light);
   transition: background-color 5000s ease-in-out 0s;
-  color: #275b6b;
 }
