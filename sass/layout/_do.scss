@@ -1,0 +1,31 @@
+.section-do {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.title-do {
+  margin-bottom: 50px;
+}
+/*  */
+.do-list {
+  display: flex;
+  align-items: center;
+}
+
+.title-team {
+  margin-bottom: 50px;
+}
+
+.do {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--color-font-normal);
+  margin-bottom: 50px;
+  line-height: 1.16;
+}
+
+.do-item:not(:last-child) {
+  margin-right: 30px;
+}

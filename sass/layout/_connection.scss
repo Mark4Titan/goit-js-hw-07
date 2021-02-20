@@ -1,0 +1,41 @@
+.connection-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.connection-itam {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.connection-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+
+  transition: background-color var(--timing-animation) var(--animation);
+}
+
+.connection-itam:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list-icon {
+  transition: var(--timing-animation) var(--animation);
+}
+
+.connection-ico:hover .social-list-icon,
+.connection-ico:focus .social-list-icon {
+  fill: var(--color-font-light);
+}
+
+.connection-ico:hover,
+.connection-ico:focus {
+  background-color: var(--color-font-accent);
+}

@@ -1,0 +1,48 @@
+.section-team {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-title,
+.team-paragraph-item {
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-item:not(:last-child) {
+  align-items: center;
+  margin-right: 30px;
+}
+
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  width: 270px;
+  background-color: var(--color-font-light);
+}
+
+.team-title {
+  color: var(--color-font-normal);
+}
+
+.team-paragraph-item {
+  color: var(--color-font-gray);
+  margin-top: 9px;
+}
+
+.wrapper {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}

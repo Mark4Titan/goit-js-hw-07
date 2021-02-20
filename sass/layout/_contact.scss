@@ -1,0 +1,22 @@
+.contact-list {
+  margin-left: auto;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-list-link {
+  display: flex;
+  align-items: center;
+  color: var(--color-font-gray);
+}
+
+.address-contact-geolocation-link:hover,
+.address-contact-geolocation-link:focus {
+  color: var(--color-font-accent);
+}

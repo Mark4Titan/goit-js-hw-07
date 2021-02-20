@@ -1,0 +1,62 @@
+.models-lis {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.models-title-item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--color-font-normal);
+  margin-bottom: 4px;
+}
+
+.models-paragraph-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--color-font-gray);
+  margin: 0;
+}
+
+.href-item {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--color-font-normal);
+  /* background-color: violet; */
+  border: 1px solid #eeeeee;
+}
+
+.models-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.models-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.models-item {
+  display: flex;
+  /* border: 1px solid #eeeeee; */
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background: var(--color-font-light);
+  box-sizing: border-box;
+
+  transition: box-shadow var(--timing-animation) var(--animation);
+}
+
+.models-item:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.models-item:nth-last-child(n + 4) {
+  margin-bottom: 30px;
+}

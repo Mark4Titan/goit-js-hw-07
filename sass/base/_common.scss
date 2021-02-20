@@ -1,0 +1,60 @@
+body {
+  font-family: var(--text-font);
+
+  background-color: var(--white-text-bg-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.714;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* в параграфах і заголовках скидаємо марджен */
+  margin: 0;
+}
+
+ul,
+ol {
+  /* в списках скидаємо відступи (зовнішні і внутрішні) */
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  /* усі зображення стали блоками */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  /* нижня лінія */
+  text-decoration: none;
+  transition: var(--timing-animation) var(--animation);
+}
+
+.address {
+  /* скидає італік */
+  font-style: normal;
+}
+
+.container {
+  /* основні параметри контейнера */
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.lists-without-dots {
+  /* вимикає цяточки в списках */
+  list-style: none;
+}
