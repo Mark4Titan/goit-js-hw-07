@@ -15,18 +15,16 @@
 }
 
 .nav {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.142;
+  @include font(14px, 500, 1.142);
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--color-font-normal);
   transition: var(--timing-animation) var(--animation);
-}
 
-.nav:hover,
-.nav:focus {
-  color: var(--color-font-accent);
+  &:hover,
+  &:focus {
+    color: var(--color-font-accent);
+  }
 }
 
 .navigation-list .accent::after {

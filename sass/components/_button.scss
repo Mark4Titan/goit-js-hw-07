@@ -10,9 +10,7 @@
   color: var(--color-font-light);
   background-color: var(--color-font-accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.842;
+  @include font($lh: 1.187);
   letter-spacing: 0.06em;
   cursor: pointer;
   border: 1 solid var(--accent-color);
@@ -20,23 +18,18 @@
   transition: box-shadow var(--timing-animation) var(--animation);
   transition: color var(--timing-animation) var(--animation);
   transition: background-color var(--timing-animation) var(--animation);
-}
 
-.hero-button:hover,
-.hero-button:focus,
-.button-send:hover,
-.button-send:focus,
-.modal-button:hover,
-.modal-button:focus {
-  background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
 }
 
 .list-button {
   margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
+  @include flexs();
 }
 
 .button-caption {
@@ -44,9 +37,7 @@
   padding: 6px 22px;
   border-radius: 4px;
   font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
+  @include font($fw: 500, $lh: 1.162);
   letter-spacing: inherit;
   color: var(--title-font);
   background-color: #f5f4fa;
@@ -55,16 +46,16 @@
   transition: background-color var(--timing-animation) var(--animation),
     color var(--timing-animation) var(--animation),
     box-shadow var(--timing-animation) var(--animation);
-}
 
-.button-caption:hover,
-.button-caption:focus {
-  border: none;
-  color: var(--color-font-light);
-  background-color: var(--color-font-accent);
+  &:hover,
+  &:focus {
+    border: none;
+    color: var(--color-font-light);
+    background-color: var(--color-font-accent);
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .button-caption-items:not(:last-child) {
@@ -75,22 +66,19 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
-}
-.modal-button:hover,
-.modal-button:focus {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.modal-button {
   padding: 10px 55px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .button-mailing {
-  display: flex;
+  @include flexs();
   padding: 10px 28px;
 
   align-items: center;
-  justify-content: center;
   transition: box-shadow var(--timing-animation) var(--animation);
 }

@@ -1,18 +1,16 @@
 .box-send {
   margin-left: auto;
-}
 
-.box-send .form-box {
-  display: flex;
-  position: relative;
+  .form-box {
+    display: flex;
+    position: relative;
+  }
 }
 
 .submit-text {
   margin-bottom: 20px;
   margin-top: 0px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font($fs: 14px);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-font-light);
@@ -30,37 +28,36 @@
   font-size: 16px;
   line-height: 1.25;
   transition: box-shadow var(--timing-animation) var(--animation);
-}
 
-.mail-in:hover,
-.mail-in:focus {
-  border: 1px solid var(--color-font-accent);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--color-font-accent);
+  }
+
+  &::placeholder {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid var(--color-font-accent);
+    -webkit-text-fill-color: var(--color-font-light);
+    transition: background-color 5000s ease-in-out 0s;
+    color: #275b6b;
+  }
 }
 
 .button-send {
-  display: flex;
+  @include flexs();
   align-items: center;
-  justify-content: center;
 }
 
 .submit-icon {
   margin-left: 10px;
   fill: var(--color-font-light);
-}
-
-.mail-in::placeholder {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.mail-in:-webkit-autofill,
-.mail-in:-webkit-autofill:hover,
-.mail-in:-webkit-autofill:focus {
-  border: 1px solid var(--color-font-accent);
-  -webkit-text-fill-color: var(--color-font-light);
-  transition: background-color 5000s ease-in-out 0s;
-  color: #275b6b;
 }

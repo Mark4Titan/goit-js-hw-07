@@ -1,5 +1,6 @@
 // utils
 @import "./utils/variables";
+@import "./utils/mixins";
 
 // base
 @import "./base/common";
@@ -8,10 +9,22 @@
 // layout
 @import "./layout/header";
 @import "./layout/navigation";
-@import "./layout/contact";
+@import "./layout/hero";
+@import "./layout/advantages";
 @import "./layout/connection";
+@import "./layout/contact";
+@import "./layout/do";
+@import "./layout/signature";
 @import "./layout/team";
+@import "./layout/models";
+@import "./layout/item";
+@import "./layout/text";
+@import "./layout/footer";
 
 // components
 @import "./components/accent";
 @import "./components/logotype";
+@import "./components/button";
+@import "./components/connection";
+@import "./components/modal";
+@import "./components/submit";

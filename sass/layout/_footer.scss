@@ -13,11 +13,6 @@
   color: var(--color-font-light);
 }
 
-.hero-board {
-  padding: 200px 252px;
-  text-align: center;
-}
-
 .contact {
   font-weight: 500;
   font-style: normal;
@@ -26,10 +21,11 @@
 .address-contact-geolocation-link {
   color: var(--color-font-light);
   font-style: normal;
-}
 
-.address-contact-geolocation-link:focus {
-  color: var(--color-font-accent);
+  &:hover,
+  &:focus {
+    color: var(--color-font-accent);
+  }
 }
 
 .footer {
@@ -55,11 +51,11 @@
   padding: 0;
   display: inline-block;
   transition: var(--timing-animation) var(--animation);
-}
 
-.address-contact-link:hover,
-.address-contact-link:focus {
-  color: var(--color-font-accent);
+  &:hover,
+  &:focus {
+    color: var(--color-font-accent);
+  }
 }
 
 .address-list .address-contact-item + .address-contact-item {
@@ -71,11 +67,9 @@
 }
 
 .footer-title-connection {
+  @include font($fs: 14px);
   margin-bottom: 20px;
-  font-weight: 700;
   color: var(--color-font-light);
-  font-size: 14px;
-  line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
