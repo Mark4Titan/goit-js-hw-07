@@ -1,9 +1,0 @@
-.logotype {
-  font-family: Raleway, cursive;
-  font-family: var(--title-font);
-  @include font($fs: 26px, $lh: 1.192);
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  color: var(--color-font-normal);
-  margin-right: 93px;
-}
