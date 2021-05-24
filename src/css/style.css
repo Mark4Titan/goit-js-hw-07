@@ -25,12 +25,6 @@ body {
   margin-top: 5px;
   border-radius: 50%;
 }
-.product-card__name-availiable::before {
-  background-color: greenyellow;
-}
-.product-card__name-not-availiable::before {
-  background-color: red;
-}
 
 /*Task3*/
 .gelle {
@@ -49,13 +43,13 @@ body {
 
 /*Task6*/
 #validation-input {
-  border: 10px solid #bdbdbd;
+  border: 3px solid #bdbdbd;
 }
 
-.valid {
+#validation-input.valid {
   border-color: #4caf50;
 }
 
-.invalid {
+#validation-input.invalid {
   border-color: #f44336;
 }
