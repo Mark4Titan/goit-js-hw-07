@@ -1,27 +1,34 @@
+
+
+
+const inQn = document.querySelector('#controls input');
 const btnCreate = document.querySelector('button[data-action="render"]');
 const btnDestroy = document.querySelector('button[data-action="destroy"]');
-const inQn = document.querySelector('div#controls input');
-const bigBox = document.querySelector('div#boxes');
+const bigBox = document.querySelector('#boxes');
 
-btnCreate.addEventListener('click', createBoxes);
+
+
+btnCreate.addEventListener('click', () => createBoxes(inQn.value));
 btnDestroy.addEventListener('click', destroyBoxes);
 
-let newWidth;
-let newHeight;
+let oldSize;
+if (oldSize == null){nextSize(null);}
 
-
-if (newWidth == null || newHeight == null){nextSize(null);}
 
 function createBoxes(amount) {
-    for (let i = 0; i < inQn.value; i++) {
-
-        const addDiv = document.createElement("div");
-        nextSize(10);
-        addDiv.style = styleDesigner();   
-        bigBox.appendChild(addDiv);
-    }
-}
+  let newDivs = [];
+  for (let i = 0; i < amount; i++) {
+    const newDiv = document.createElement('div');
     
+    // nextSize(10);
+    newDiv.style.width = `${nextSize(10)}px`;
+    newDiv.style.height = newDiv.style.width;
+    newDiv.style.backgroundColor = ColorBoxes();
+    newDivs.push(newDiv);
+  }
+  bigBox.append(...newDivs);
+}
+
 function destroyBoxes(event) { 
      bigBox.innerHTML = '';
      nextSize(null);
@@ -29,23 +36,22 @@ function destroyBoxes(event) {
 
 function nextSize(nextSize) {
     if (nextSize == null) {
-        newWidth = 30;
-        newHeight = 30;
-        inQn.value = 0; // в умові не вказано, але галаю так правильніше
+        oldSize = 30;
+        inQn.value = 0; // в умові не вказано, але галаю так правильніше        
     } else {
-        newWidth += nextSize;
-        newHeight += nextSize;    
+        return oldSize += nextSize; 
     } 
 }
- 
 
-
-function styleDesigner() {
-     return  `background-color:#` + `${ColorBoxes()}; width: ${newWidth}px; height: ${newHeight}px;`;
-}
- 
 function ColorBoxes() {
-     return (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
+    return '#' + (((1 << 24) * Math.random()) | 0).toString(16);
  }
+
+
+
+
+
+
+
 
 

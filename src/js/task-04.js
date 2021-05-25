@@ -10,15 +10,13 @@ btnDecrement.addEventListener("click", decrement);
 // btnDecrement.addEventListener("mousedown", decrement);
 
 
-let counterValue = [0];
+let counterValue = 0;
 
 
 function increment (event) {
     displayCounter.textContent = ++counterValue;
-    // console.log(`increment + 1, totol Value = ${counterValue}`)
 };
 function decrement (event) {
     displayCounter.textContent = --counterValue;
-    // console.log(`increment - 1, totol Value = ${counterValue}`)
 };
 
