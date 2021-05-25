@@ -14,7 +14,8 @@ function inputValidation(event) {
      
     if (/^\s+$/.test(event.target.value)) {inputRef.value = ''}
     
-    if(inputRef.value === ''){inputRef.classList.remove('invalid');}
+    // if(inputRef.value === ''){inputRef.classList.remove('invalid');}
+    if (inputRef.value.length === 0) { inputRef.classList.remove('invalid'); }
 };
 
 inputRef.addEventListener('change', inputValidation);

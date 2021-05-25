@@ -37,7 +37,7 @@ function destroyBoxes(event) {
 function nextSize(nextSize) {
     if (nextSize == null) {
         oldSize = 30;
-        inQn.value = 0; // в умові не вказано, але галаю так правильніше        
+        inQn.value = null; // в умові не вказано, але галаю так правильніше        
     } else {
         return oldSize += nextSize; 
     } 
